@@ -78,10 +78,10 @@ This project is an approach to show Vibe Coding principles. Using only prompts, 
 14. **Order Generation**
     - A program simulates and creates orders by matching Supply and Demand
     - Key Aspects and Business Logic considered is as follows:
-         **Forward Planning:** The system works 3 months ahead to account for shipping times
-         **Freshness Priority:** It always tries to use the most recently harvested apples first
-         **Practical Constraints:** It only considers apples that have already been harvested by the simulation date
-         **Shortage Handling:** It warns when it can't fully meet projected demand
+         - **Forward Planning:** The system works 3 months ahead to account for shipping times
+         - **Freshness Priority:** It always tries to use the most recently harvested apples first
+         - **Practical Constraints:** It only considers apples that have already been harvested by the simulation date
+         - **Shortage Handling:** It warns when it can't fully meet projected demand
       
 15. **Introduce Chaos**
     - Identify major events during the year that might impact supply, transit and demand (the events can be natural disasters, labour issues, technology related etc)
