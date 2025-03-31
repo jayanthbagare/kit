@@ -66,5 +66,8 @@ This project is an approach to show Vibe Coding principles. Using only prompts, 
 
 13. **Energy Consumption Calculation**
     - Estimated energy consumption for each journey from the origin port to the destination port for various shipping routes.
-
+14. **Order Generation**
+    - Write a program that simulates and creates orders by matching Supply and Demand
+16. **Introduce Chaos**
+    - Identify major events during the year that might impact supply, transit and demand (the events can be natural disasters, labour issues, technology related etc)
 
