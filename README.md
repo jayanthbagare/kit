@@ -19,7 +19,13 @@ This project is an approach to show Vibe Coding principles. Using only prompts, 
      - Unit of Measure
 
 3. **Harvest Season Data Collection**
-   - Gathered harvest season data by country and variety.
+   **Prompt** : what are the apple harvest seasons for the following countries and apple varities India, South Africa, Chile, New Zealand
+        "Royal Gala",
+        "Fuji",
+        "Granny Smith",
+        "Golden Delicious",
+        "Pink Lady"
+   **File of Data**: apple_harvest_varities.md
 
 4. **Production Tonnage Estimation**
    - Identified the approximate production tonnage per country and variety.
@@ -41,7 +47,7 @@ This project is an approach to show Vibe Coding principles. Using only prompts, 
    - Identified the top three supermarket chains in Germany that stock the top five varieties.
    - Determined the top three cities with the highest apple consumption.
 
-9. **Sales Estimation per City and Supermarket**
+9.  **Sales Estimation per City and Supermarket**
    - Estimated apple sales per city and supermarket chain, considering:
      - Demand
      - Seasonality
