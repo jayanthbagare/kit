@@ -70,4 +70,5 @@ This project is an approach to show Vibe Coding principles. Using only prompts, 
     - Write a program that simulates and creates orders by matching Supply and Demand
 16. **Introduce Chaos**
     - Identify major events during the year that might impact supply, transit and demand (the events can be natural disasters, labour issues, technology related etc)
+    - Adjust the delivery dates and quantities accordingly
 
