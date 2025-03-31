@@ -19,7 +19,7 @@ This project is an approach to show Vibe Coding principles. Using only prompts, 
      - Unit of Measure
 
 3. **Harvest Season Data Collection**
-4. 
+   
    **Prompt** : what are the apple harvest seasons for the following countries and apple varities India, South Africa, Chile, New Zealand
         "Royal Gala",
         "Fuji",
@@ -29,40 +29,40 @@ This project is an approach to show Vibe Coding principles. Using only prompts, 
 
    **File of Data**: apple_harvest_varities.md
 
-5. **Production Tonnage Estimation**
+4. **Production Tonnage Estimation**
    - Identified the approximate production tonnage per country and variety.
 
-6. **Yield Breakup Generation**
+5. **Yield Breakup Generation**
    - Created a yield distribution based on:
      - Harvest season
      - Country
      - Variety
      - Tonnage
 
-7. **Supplier Data Compilation**
+6. **Supplier Data Compilation**
    - Collected supplier information for each country.
 
-8. **Nearest Shipping Ports Identification**
+7. **Nearest Shipping Ports Identification**
    - Determined the nearest ports from which suppliers would ship apples.
 
-9. **Supermarket Chain & Consumption Analysis**
+8. **Supermarket Chain & Consumption Analysis**
    - Identified the top three supermarket chains in Germany that stock the top five varieties.
    - Determined the top three cities with the highest apple consumption.
 
-10. **Sales Estimation per City and Supermarket**
+9.  **Sales Estimation per City and Supermarket**
    - Estimated apple sales per city and supermarket chain, considering:
      - Demand
      - Seasonality
      - Variety preferences
      - City population
 
-11. **Warehouse Identification**
+10. **Warehouse Identification**
     - For each identified city and supermarket chain, determined the largest warehouse in that city.
 
-12. **Importer Data Analysis**
+11. **Importer Data Analysis**
     - Researched importers in Rotterdam and identified the largest apple importer with a cold storage facility.
 
-13. **Energy & Sustainability Research**
+12. **Energy & Sustainability Research**
     - Analyzed energy and sustainability data for the cold storage facility (Cool Port II, Rotterdam).
     - Collected energy-related data, including:
       - Storage Facility
@@ -72,11 +72,11 @@ This project is an approach to show Vibe Coding principles. Using only prompts, 
       - Total Capacity Tonnage
       - Solar Generation Capacity
 
-14. **Energy Consumption Calculation**
+13. **Energy Consumption Calculation**
     - Estimated energy consumption for each journey from the origin port to the destination port for various shipping routes.
-15. **Order Generation**
+14. **Order Generation**
     - Write a program that simulates and creates orders by matching Supply and Demand
-16. **Introduce Chaos**
+15. **Introduce Chaos**
     - Identify major events during the year that might impact supply, transit and demand (the events can be natural disasters, labour issues, technology related etc)
     - Adjust the delivery dates and quantities accordingly
 
