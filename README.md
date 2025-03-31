@@ -1,4 +1,5 @@
 # Generation of Simulated Data for Apple Supply Chain 
+This project is an approach to show Vibe Coding principles. Using only prompts, get the LLM to do deep research, and then use all of that researched data into creating synthetic data to learn how to handle supply chain disruptions.
 
 ## Approach Taken
 
