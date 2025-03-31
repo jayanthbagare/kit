@@ -1,0 +1,11 @@
+SupplierID,Country,Company,Address,Shipment Port,Website,Email,Phone
+S4,New Zealand,T&G Global (ENZA),1 Clemow Drive Mt Wellington Auckland 1060 New Zealand,Ports of Auckland Sunderland Street Auckland New Zealand,https://tandg.global/,info@tandg.global,+64 9 573 8700
+S41,New Zealand,Mr Apple,23 Station Road Whakatu Hastings New Zealand,Port of Napier Breakwater Road Napier 4110 New Zealand,https://www.mrapple.com/,info@mrapple.com,+64 6 873 0080
+S2,South Africa,Tru-Cape Fruit Marketing,36 St James Street Somerset West 7130 South Africa,Port of Cape Town P O Box 4245 Roggebaai 8000 South Africa,https://tru-cape.com/,info@tru-cape.co.za,+27 21 850 1800
+S21,South Africa,Ceres Fruit Growers,Bon Esperance Street Ceres 6835 South Africa,Port of Cape Town P O Box 4245 Roggebaai 8000 South Africa,https://www.cfg.co.za/,info@cfg.co.za,+27 23 316 1550
+S22,South Africa,Unifrutti South Africa,Corner of R44 and Annandale Road Stellenbosch South Africa,Port of Cape Town P O Box 4245 Roggebaai 8000 South Africa,https://www.unifrutti.co.za/,info@unifrutti.co.za,+27 21 872 1501
+S3,Chile,Exportadora San Clemente,Presidente Riesco 5335 Of. 606 Las Condes Santiago Chile,Port of San Antonio Barros Luco San Antonio Valparaiso Chile,http://www.sclem.cl/,fhughes@sclem.cl,+56 2 2322 3000
+S31,Chile,Dole Chile S.A.,Av. Vitacura 2670 Piso 12 Las Condes Santiago Chile,Port of San Antonio Barros Luco San Antonio Valparaiso Chile,https://www.dole.com/,francisco.chacon@dole.com,+56 22 787 4100
+S32,Chile,Unifrutti Chile,Avda. Vitacura 2909 Of. 1002 Las Condes Santiago Chile,Port of San Antonio Barros Luco San Antonio Valparaiso Chile,https://www.unifrutti.com/,mrufin@unifrutti.com,+56 22 636 2200
+S1,India,Dev Bhumi Cold Chain,Prakriti Farms Village Bagli Tehsil Balh Mandi 175027 Himachal Pradesh India,Jawaharlal Nehru Port Sheva Navi Mumbai 400707 Maharashtra India,https://www.devbhumicoldchain.com/,info@devbhumicoldchain.com,+91 1892 225001
+S12,India,Mahajan Overseas,76 Industrial Focal Point Mehta Road Amritsar 143001 Punjab India,Mundra Port Adani Port Road Mundra 370421 Gujarat India,http://www.mahajanoverseas.com/,info@mahajanoverseas.com,+91 183 2502125

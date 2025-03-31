@@ -1,0 +1,11 @@
+customer_id,warehouse_id,supermarket_chain,city,warehouse_name,address
+EDEKA,EDK_HH_001,Edeka,Hamburg,Edeka Zentrale AG & Co KG Headquarters,"New-York-Ring 6, 22297 Hamburg, Germany"
+EDEKA,EDK_BER_001,Edeka,Berlin,Edeka Minden-Hannover Freienbrink,"Am Logistikzentrum 1, 15537 Grünheide, Germany"
+EDEKA,EDK_MUC_001,Edeka,Munich,Edeka Südbayern Logistics Center,"Otto-Hahn-Ring 10, 81739 Munich, Germany"
+LIDL,LDL_HH_001,Lidl,Hamburg,Lidl Verteilzentrum Hamburg,"Werner-Otto-Straße 1-7, 22179 Hamburg, Germany"
+LIDL,LDL_BER_001,Lidl,Berlin,Lidl Logistikzentrum Berlin-Brandenburg,"Straße der Einheit 122-128, 14612 Falkensee, Germany"
+LIDL,LDL_MUC_001,Lidl,Munich,Lidl Logistikzentrum München,"Bajuwarenring 1, 82041 Oberhaching, Germany"
+REWE,RWE_HH_001,REWE,Hamburg,REWE Nord Logistics Center,"Daimlerstraße 2, 21629 Neu Wulmstorf, Germany"
+REWE,RWE_BER_001,REWE,Berlin,REWE Ost Logistikzentrum,"Am Südpark 1, 14974 Ludwigsfelde, Germany"
+REWE,RWE_CGN_001,REWE,Cologne,REWE Group Headquarters,"Domstraße 20, 50668 Cologne, Germany"
+REWE,RWE_NI_001,REWE,Neu-Isenburg,REWE Central Dry Goods Warehouse,"Im Schwarzenbruch 1, 63263 Neu-Isenburg, Germany"

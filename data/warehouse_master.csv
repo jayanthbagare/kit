@@ -1,0 +1,2 @@
+WarehouseID,Name_of_Storage_Facility,Address,Total_Energy_Consumed_per_Day,Backup_Energy_per_Day,Total_Capacity_Tonnage,Solar_Generation_Capacity
+WH01,"Lineage Cool Port II","Albert Plesmanweg 240 (Portno. 2450), Rotterdam, 3089KK, The Netherlands","342 kW","1800 kW","67500 tonnes","11000 panels"

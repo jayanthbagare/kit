@@ -1,0 +1,55 @@
+SupplierID,Country,Apple Variety,Harvest Month,Harvest Quantity
+S1,India,Royal Gala,August,600
+S1,India,Royal Gala,September,600
+S1,India,Fuji,August,200
+S1,India,Fuji,September,200
+S1,India,Fuji,October,200
+S1,India,Golden Delicious,May,800
+S1,India,Granny Smith,September,450
+S1,India,Granny Smith,October,450
+S1,India,Pink Lady,September,350
+S1,India,Pink Lady,October,350
+S2,South Africa,Royal Gala,January,864
+S2,South Africa,Royal Gala,February,864
+S2,South Africa,Royal Gala,March,864
+S2,South Africa,Royal Gala,April,864
+S2,South Africa,Royal Gala,May,864
+S2,South Africa,Fuji,January,432
+S2,South Africa,Fuji,February,432
+S2,South Africa,Fuji,March,432
+S2,South Africa,Fuji,April,432
+S2,South Africa,Fuji,May,432
+S2,South Africa,Golden Delicious,January,576
+S2,South Africa,Golden Delicious,February,576
+S2,South Africa,Golden Delicious,March,576
+S2,South Africa,Golden Delicious,April,576
+S2,South Africa,Golden Delicious,May,576
+S2,South Africa,Granny Smith,January,648
+S2,South Africa,Granny Smith,February,648
+S2,South Africa,Granny Smith,March,648
+S2,South Africa,Granny Smith,April,648
+S2,South Africa,Granny Smith,May,648
+S2,South Africa,Pink Lady,January,504
+S2,South Africa,Pink Lady,February,504
+S2,South Africa,Pink Lady,March,504
+S2,South Africa,Pink Lady,April,504
+S2,South Africa,Pink Lady,May,504
+S3,Chile,Royal Gala,February,2640
+S3,Chile,Royal Gala,March,2640
+S3,Chile,Fuji,March,1320
+S3,Chile,Fuji,April,1320
+S3,Chile,Granny Smith,March,1980
+S3,Chile,Granny Smith,April,1980
+S3,Chile,Golden Delicious,February,1760
+S3,Chile,Golden Delicious,March,1760
+S3,Chile,Pink Lady,April,1540
+S3,Chile,Pink Lady,May,1540
+S4,New Zealand,Royal Gala,February,8400
+S4,New Zealand,Fuji,March,2100
+S4,New Zealand,Fuji,April,2100
+S4,New Zealand,Granny Smith,April,3150
+S4,New Zealand,Granny Smith,May,3150
+S4,New Zealand,Golden Delicious,February,2800
+S4,New Zealand,Golden Delicious,March,2800
+S4,New Zealand,Pink Lady,April,2450
+S4,New Zealand,Pink Lady,May,2450

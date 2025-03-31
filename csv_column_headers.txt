@@ -1,0 +1,28 @@
+AppleVariety
+royal_gala,fuji,granny_smith,golden_delicious,pink_lady
+
+Supplier_Master
+SupplierID,Country,Company,Address,ShipmentPort,Website,Email,Phone
+
+Harvest_By_Supplier
+SupplierID,Country,AppleVariety,HarvestMonth,HarvestQuantity
+
+Products
+SKUID,Name,ShelfLife,Grade,UnitOfMeasure(in tons)
+ShelfLife(5,10,15 days)
+
+CustomerMaster
+customerid,warehouseid,supermarketchain,city,warehousename,address
+
+CustomerDemand
+city,customer_id,month,royal_gala,fuji,granny_smith,golden_delicious,pink_lady,total
+
+WarehouseMaster
+WarehouseID,Name_of_Storage_Facility,Address,Total_Energy_Consumed_per_Day,Backup_Energy_per_Day,Total_Capacity_Tonnage,Solar_Generation_Capacity
+
+EnergyConsumption
+OriginPort,DestinationPort,ApproximateDistance(km),AverageEnergyConsumption(kWh)/ton-km,AverageCost(EUR)/Ton
+
+
+
+
