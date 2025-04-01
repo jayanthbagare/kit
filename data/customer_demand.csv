@@ -1,4 +1,4 @@
-city,customer_id,month,royal_gala,fuji,granny_smith,golden_delicious,pink_lady,total
+city,customer_id,month,royal_gala(metrictons),fuji(metrictons),granny_smith(metrictons),golden_delicious(metrictons),pink_lady(metrictons),total(metrictons)
 Berlin,EDEKA,January,78,87,67,81,50,364
 Berlin,EDEKA,February,73,81,64,76,49,343
 Berlin,EDEKA,March,70,76,62,70,52,329

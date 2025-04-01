@@ -23,6 +23,10 @@ WarehouseID,Name_of_Storage_Facility,Address,Total_Energy_Consumed_per_Day,Backu
 EnergyConsumption
 OriginPort,DestinationPort,ApproximateDistance(km),AverageEnergyConsumption(kWh)/ton-km,AverageCost(EUR)/Ton
 
+Order
+PO_ID,OrderDate,SupplierID,Country,AppleVariety,QuantityOrdered,HarvestMonth,HarvestYear,ExpectedArrivalDate,DemandMonthTarget,SourceHarvestID
 
+Delivery
+DEL_ID,PO_ID,OrderDate,SupplierID,Country,AppleVariety,QuantityOrdered,QuantityDelivered,ExpectedDeliveryDate,ActualDeliveryDate,DeliveryNote
 
 

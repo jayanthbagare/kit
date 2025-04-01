@@ -1,4 +1,4 @@
-PO_ID,OrderDate,SupplierID,Country,AppleVariety,QuantityOrdered,HarvestMonth,HarvestYear,ExpectedArrivalDate,DemandMonthTarget,SourceHarvestID
+PO_ID,OrderDate,SupplierID,Country,AppleVariety,QuantityOrdered(metrictons),HarvestMonth,HarvestYear,ExpectedArrivalDate,DemandMonthTarget,SourceHarvestID
 PO_00001,2021-01-01,S2,South Africa,Fuji,344,January,2021,2021-01-26,2021-04,S2_Fuji_1_2021
 PO_00002,2021-01-01,S2,South Africa,Golden Delicious,318,January,2021,2021-01-26,2021-04,S2_Golden Delicious_1_2021
 PO_00003,2021-01-01,S2,South Africa,Granny Smith,272,January,2021,2021-01-26,2021-04,S2_Granny Smith_1_2021

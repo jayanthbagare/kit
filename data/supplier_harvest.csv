@@ -1,4 +1,4 @@
-SupplierID,Country,Apple Variety,Harvest Month,Harvest Quantity
+SupplierID,Country,Apple Variety,Harvest Month,Harvest Quantity(million metrictons)
 S1,India,Royal Gala,August,600
 S1,India,Royal Gala,September,600
 S1,India,Fuji,August,200
