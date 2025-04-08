@@ -1,0 +1,38 @@
+Estimated Calculation for Cool Port II
+For a facility of Cool Port II's size (60,000 pallet capacity):
+
+Facility Size Estimation:
+
+A typical pallet space requires about 4-6 cubic meters of cold storage
+60,000 pallets × 5 m³ = approximately 300,000 m³ facility volume
+
+
+Energy Consumption:
+
+Using the 10 kWh/m³/year standard for modern efficient facilities
+300,000 m³ × 10 kWh/m³/year = 3,000,000 kWh/year
+3,000,000 kWh/year ÷ 365 days = approximately 8,219 kWh/day
+8,219 kWh/day ÷ 24 hours = approximately 342 kW average continuous load
+
+
+Emergency Backup Power Sizing:
+
+Accounting for starting power requirements (4× running watts)
+342 kW × 4 = 1,368 kW starting capacity needed
+Adding 25% reserve capacity for additional safety margin
+1,368 kW × 1.25 = 1,710 kW minimum generator capacity
+
+
+Generator Configuration:
+
+Industrial facilities typically use multiple generators for redundancy
+A common configuration might be 3 × 600 kW generators (1,800 kW total)
+This allows for maintenance of one generator while maintaining full backup 
+capacity
+
+
+
+Therefore, Cool Port II would likely require approximately 1,700-1,800 kW of 
+backup generator capacity, likely configured as multiple large diesel generators 
+with automatic transfer switches, fuel storage for at least 48-72 hours of operation, 
+and regular testing and maintenance protocols.
