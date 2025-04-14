@@ -1,0 +1,163 @@
+DEL_ID,PO_ID,OrderDate,SupplierID,Country,AppleVariety,QuantityOrdered(metrictons),QuantityDelivered(metrictons),ExpectedDeliveryDate,ActualDeliveryDate,DeliveryNote,Distance_km,CO2_Emissions_kg,OrderedQty(in pallets),DeliveredQty(in pallets)
+DEL_00001,PO_00001,01/01/23,S2,South Africa,Fuji,344,344,26/01/23,02/02/23,South African apple season slightly delayed [1],11100.0,32.07456,6880,6880
+DEL_00002,PO_00002,01/01/23,S2,South Africa,Golden Delicious,318,318,26/01/23,02/02/23,South African apple season slightly delayed [1],11100.0,29.650320000000004,5724,5724
+DEL_00003,PO_00003,01/01/23,S2,South Africa,Granny Smith,272,272,26/01/23,02/02/23,South African apple season slightly delayed [1],11100.0,25.36128,5712,5712
+DEL_00004,PO_00004,01/01/23,S2,South Africa,Pink Lady,262,262,26/01/23,02/02/23,South African apple season slightly delayed [1],11100.0,24.428880000000003,4978,4978
+DEL_00005,PO_00005,01/01/23,S2,South Africa,Royal Gala,325,325,26/01/23,02/02/23,South African apple season slightly delayed [1],11100.0,30.303,7150,7150
+DEL_00006,PO_00006,01/02/23,S2,South Africa,Fuji,318,318,26/02/23,26/02/23,No major disruption identified based on current research.,11100.0,29.650320000000004,6360,6360
+DEL_00007,PO_00007,01/02/23,S2,South Africa,Golden Delicious,291,291,26/02/23,26/02/23,No major disruption identified based on current research.,11100.0,27.13284,5238,5238
+DEL_00008,PO_00008,01/02/23,S2,South Africa,Granny Smith,243,243,26/02/23,26/02/23,No major disruption identified based on current research.,11100.0,22.65732,5103,5103
+DEL_00009,PO_00009,01/02/23,S2,South Africa,Pink Lady,276,276,26/02/23,26/02/23,No major disruption identified based on current research.,11100.0,25.734240000000007,5244,5244
+DEL_00010,PO_00010,01/02/23,S2,South Africa,Royal Gala,313,313,26/02/23,26/02/23,No major disruption identified based on current research.,11100.0,29.184120000000004,6886,6886
+DEL_00011,PO_00011,01/03/23,S2,South Africa,Fuji,272,272,26/03/23,26/03/23,No major disruption identified based on current research.,11100.0,25.36128,5440,5440
+DEL_00012,PO_00012,01/03/23,S2,South Africa,Golden Delicious,265,265,26/03/23,26/03/23,No major disruption identified based on current research.,11100.0,24.7086,4770,4770
+DEL_00013,PO_00013,01/03/23,S2,South Africa,Granny Smith,230,230,26/03/23,26/03/23,No major disruption identified based on current research.,11100.0,21.4452,4830,4830
+DEL_00014,PO_00014,01/03/23,S2,South Africa,Pink Lady,246,246,26/03/23,26/03/23,No major disruption identified based on current research.,11100.0,22.93704,4674,4674
+DEL_00015,PO_00015,01/03/23,S2,South Africa,Royal Gala,288,288,26/03/23,26/03/23,No major disruption identified based on current research.,11100.0,26.85312,6336,6336
+DEL_00016,PO_00016,01/04/23,S2,South Africa,Fuji,258,258,26/04/23,26/04/23,No major disruption identified based on current research.,11100.0,24.05592,5160,5160
+DEL_00017,PO_00017,01/04/23,S2,South Africa,Golden Delicious,238,238,26/04/23,26/04/23,No major disruption identified based on current research.,11100.0,22.19112,4284,4284
+DEL_00018,PO_00018,01/04/23,S2,South Africa,Granny Smith,216,216,26/04/23,26/04/23,No major disruption identified based on current research.,11100.0,20.13984,4536,4536
+DEL_00019,PO_00019,01/04/23,S2,South Africa,Pink Lady,223,223,26/04/23,26/04/23,No major disruption identified based on current research.,11100.0,20.792520000000003,4237,4237
+DEL_00020,PO_00020,01/04/23,S2,South Africa,Royal Gala,272,272,26/04/23,26/04/23,No major disruption identified based on current research.,11100.0,25.36128,5984,5984
+DEL_00021,PO_00021,01/05/23,S2,South Africa,Fuji,302,302,26/05/23,26/05/23,No major disruption identified based on current research.,11100.0,28.15848,6040,6040
+DEL_00022,PO_00022,01/05/23,S1,India,Golden Delicious,265,212,31/05/23,14/06/23,Pre-monsoon rains in India likely impacted harvest [2],21700.0,38.64336,4770,3816
+DEL_00023,PO_00023,01/05/23,S2,South Africa,Granny Smith,230,230,26/05/23,26/05/23,No major disruption identified based on current research.,11100.0,21.4452,4830,4830
+DEL_00024,PO_00024,01/05/23,S2,South Africa,Pink Lady,209,209,26/05/23,26/05/23,No major disruption identified based on current research.,11100.0,19.48716,3971,3971
+DEL_00025,PO_00025,01/05/23,S2,South Africa,Royal Gala,374,374,26/05/23,26/05/23,No major disruption identified based on current research.,11100.0,34.87176,8228,8228
+DEL_00026,PO_00026,01/06/23,S2,South Africa,Fuji,130,130,26/06/23,26/06/23,No major disruption identified based on current research.,11100.0,12.1212,2600,2600
+DEL_00027,PO_00027,01/06/23,S2,South Africa,Fuji,174,174,26/06/23,26/06/23,No major disruption identified based on current research.,11100.0,16.22376,3480,3480
+DEL_00028,PO_00028,01/06/23,S3,Chile,Fuji,51,51,27/06/23,27/06/23,No major disruption identified based on current research.,13900.0,5.95476,1020,1020
+DEL_00029,PO_00029,01/06/23,S1,India,Golden Delicious,348,348,01/07/23,01/07/23,No major disruption identified based on current research.,21700.0,63.43344,6264,6264
+DEL_00030,PO_00030,01/06/23,S2,South Africa,Granny Smith,258,258,26/06/23,26/06/23,No major disruption identified based on current research.,11100.0,24.05592,5418,5418
+DEL_00031,PO_00031,01/06/23,S2,South Africa,Pink Lady,237,237,26/06/23,26/06/23,No major disruption identified based on current research.,11100.0,22.09788,4503,4503
+DEL_00032,PO_00032,01/06/23,S2,South Africa,Royal Gala,480,480,26/06/23,26/06/23,No major disruption identified based on current research.,11100.0,44.7552,10560,10560
+DEL_00033,PO_00033,01/07/23,S3,Chile,Fuji,437,437,27/07/23,27/07/23,No major disruption identified based on current research.,13900.0,51.02412,8740,8740
+DEL_00034,PO_00034,01/07/23,S1,India,Golden Delicious,187,187,31/07/23,31/07/23,No major disruption identified based on current research.,21700.0,34.08636,3366,3366
+DEL_00035,PO_00035,01/07/23,S2,South Africa,Golden Delicious,215,215,26/07/23,26/07/23,No major disruption identified based on current research.,11100.0,20.0466,3870,3870
+DEL_00036,PO_00036,01/07/23,S2,South Africa,Granny Smith,160,160,26/07/23,26/07/23,No major disruption identified based on current research.,11100.0,14.918400000000002,3360,3360
+DEL_00037,PO_00037,01/07/23,S4,New Zealand,Granny Smith,153,115,28/08/23,09/10/23,Cyclone Gabrielle caused significant damage in New Zealand [3],17600.0,17.001600000000003,3213,2415
+DEL_00038,PO_00038,01/07/23,S2,South Africa,Pink Lady,58,58,26/07/23,26/07/23,No major disruption identified based on current research.,11100.0,5.407920000000001,1102,1102
+DEL_00039,PO_00039,01/07/23,S3,Chile,Pink Lady,225,225,27/07/23,27/07/23,No major disruption identified based on current research.,13900.0,26.271,4275,4275
+DEL_00040,PO_00040,01/07/23,S2,South Africa,Royal Gala,10,10,26/07/23,26/07/23,No major disruption identified based on current research.,11100.0,0.9324,220,220
+DEL_00041,PO_00041,01/07/23,S2,South Africa,Royal Gala,509,509,26/07/23,26/07/23,No major disruption identified based on current research.,11100.0,47.45916,11198,11198
+DEL_00042,PO_00042,01/08/23,S1,India,Fuji,200,100,31/08/23,28/09/23,"Floods in Himachal Pradesh, India, significantly reduced apple production [2, 4]",21700.0,18.228,4000,2000
+DEL_00043,PO_00043,01/08/23,S3,Chile,Fuji,284,284,27/08/23,27/08/23,No major disruption identified based on current research.,13900.0,33.15984,5680,5680
+DEL_00044,PO_00044,01/08/23,S2,South Africa,Golden Delicious,361,361,26/08/23,26/08/23,No major disruption identified based on current research.,11100.0,33.65964,6498,6498
+DEL_00045,PO_00045,01/08/23,S2,South Africa,Golden Delicious,55,55,26/08/23,26/08/23,No major disruption identified based on current research.,11100.0,5.1282,990,990
+DEL_00046,PO_00046,01/08/23,S4,New Zealand,Granny Smith,341,341,28/09/23,28/09/23,No major disruption identified based on current research.,17600.0,50.41344,7161,7161
+DEL_00047,PO_00047,01/08/23,S3,Chile,Pink Lady,292,292,27/08/23,27/08/23,No major disruption identified based on current research.,13900.0,34.09392,5548,5548
+DEL_00048,PO_00048,01/08/23,S1,India,Royal Gala,465,233,31/08/23,28/09/23,"Floods in Himachal Pradesh, India, significantly reduced apple production [2, 4]",21700.0,42.47124000000001,10230,5126
+DEL_00049,PO_00049,01/09/23,S1,India,Fuji,200,200,01/10/23,01/10/23,No major disruption identified based on current research.,21700.0,36.456,4000,4000
+DEL_00050,PO_00050,01/09/23,S3,Chile,Fuji,255,255,27/09/23,27/09/23,No major disruption identified based on current research.,13900.0,29.7738,5100,5100
+DEL_00051,PO_00051,01/09/23,S2,South Africa,Golden Delicious,283,283,26/09/23,26/09/23,No major disruption identified based on current research.,11100.0,26.38692,5094,5094
+DEL_00052,PO_00052,01/09/23,S2,South Africa,Golden Delicious,147,147,26/09/23,26/09/23,No major disruption identified based on current research.,11100.0,13.70628,2646,2646
+DEL_00053,PO_00053,01/09/23,S1,India,Granny Smith,355,178,01/10/23,29/10/23,"Floods in Himachal Pradesh, India, significantly reduced apple production [2, 4]",21700.0,32.44584,7455,3738
+DEL_00054,PO_00054,01/09/23,S1,India,Pink Lady,279,279,01/10/23,01/10/23,No major disruption identified based on current research.,21700.0,50.85612,5301,5301
+DEL_00055,PO_00055,01/09/23,S1,India,Royal Gala,437,219,01/10/23,29/10/23,"Floods in Himachal Pradesh, India, significantly reduced apple production [2, 4]",21700.0,39.91932,9614,4818
+DEL_00056,PO_00056,01/10/23,S1,India,Fuji,200,200,31/10/23,31/10/23,No major disruption identified based on current research.,21700.0,36.456,4000,4000
+DEL_00057,PO_00057,01/10/23,S3,Chile,Fuji,230,230,27/10/23,27/10/23,No major disruption identified based on current research.,13900.0,26.854800000000004,4600,4600
+DEL_00058,PO_00058,01/10/23,S2,South Africa,Golden Delicious,164,164,26/10/23,26/10/23,No major disruption identified based on current research.,11100.0,15.29136,2952,2952
+DEL_00059,PO_00059,01/10/23,S3,Chile,Golden Delicious,238,238,27/10/23,27/10/23,No major disruption identified based on current research.,13900.0,27.78888,4284,4284
+DEL_00060,PO_00060,01/10/23,S1,India,Granny Smith,325,325,31/10/23,31/10/23,No major disruption identified based on current research.,21700.0,59.241,6825,6825
+DEL_00061,PO_00061,01/10/23,S1,India,Pink Lady,246,246,31/10/23,31/10/23,No major disruption identified based on current research.,21700.0,44.84088,4674,4674
+DEL_00062,PO_00062,01/10/23,S1,India,Royal Gala,163,82,31/10/23,28/11/23,"Floods in Himachal Pradesh, India, significantly reduced apple production [2, 4]",21700.0,14.94696,3586,1804
+DEL_00063,PO_00063,01/10/23,S1,India,Royal Gala,135,135,31/10/23,31/10/23,No major disruption identified based on current research.,21700.0,24.6078,2970,2970
+DEL_00064,PO_00064,01/10/23,S2,South Africa,Royal Gala,81,81,26/10/23,26/10/23,No major disruption identified based on current research.,11100.0,7.552440000000001,1782,1782
+DEL_00065,PO_00065,01/11/23,S3,Chile,Fuji,63,63,27/11/23,27/11/23,No major disruption identified based on current research.,13900.0,7.355880000000001,1260,1260
+DEL_00066,PO_00066,01/11/23,S4,New Zealand,Fuji,339,339,29/12/23,29/12/23,No major disruption identified based on current research.,17600.0,50.11776000000001,6780,6780
+DEL_00067,PO_00067,01/11/23,S3,Chile,Golden Delicious,374,374,27/11/23,27/11/23,No major disruption identified based on current research.,13900.0,43.66824,6732,6732
+DEL_00068,PO_00068,01/11/23,S1,India,Granny Smith,125,63,01/12/23,29/12/23,"Floods in Himachal Pradesh, India, significantly reduced apple production [2, 4]",21700.0,11.48364,2625,1323
+DEL_00069,PO_00069,01/11/23,S1,India,Granny Smith,95,95,01/12/23,01/12/23,No major disruption identified based on current research.,21700.0,17.3166,1995,1995
+DEL_00070,PO_00070,01/11/23,S4,New Zealand,Granny Smith,93,93,29/12/23,29/12/23,No major disruption identified based on current research.,17600.0,13.74912,1953,1953
+DEL_00071,PO_00071,01/11/23,S1,India,Pink Lady,104,104,01/12/23,01/12/23,No major disruption identified based on current research.,21700.0,18.95712,1976,1976
+DEL_00072,PO_00072,01/11/23,S1,India,Pink Lady,71,71,01/12/23,01/12/23,No major disruption identified based on current research.,21700.0,12.94188,1349,1349
+DEL_00073,PO_00073,01/11/23,S3,Chile,Pink Lady,62,62,27/11/23,27/11/23,No major disruption identified based on current research.,13900.0,7.23912,1178,1178
+DEL_00074,PO_00074,01/11/23,S2,South Africa,Royal Gala,2,2,26/11/23,26/11/23,No major disruption identified based on current research.,11100.0,0.1864799999999999,44,44
+DEL_00075,PO_00075,01/11/23,S2,South Africa,Royal Gala,353,353,26/11/23,26/11/23,No major disruption identified based on current research.,11100.0,32.91372,7766,7766
+DEL_00076,PO_00076,01/12/23,S4,New Zealand,Fuji,374,374,28/01/24,28/01/24,No major disruption identified based on current research.,17600.0,55.29216,7480,7480
+DEL_00077,PO_00077,01/12/23,S3,Chile,Golden Delicious,348,348,27/12/23,27/12/23,No major disruption identified based on current research.,13900.0,40.63248,6264,6264
+DEL_00078,PO_00078,01/12/23,S4,New Zealand,Granny Smith,298,238,28/01/24,10/03/24,Cyclone Gabrielle caused significant damage in New Zealand [3],17600.0,35.18592,6258,4998
+DEL_00079,PO_00079,01/12/23,S3,Chile,Pink Lady,254,254,27/12/23,27/12/23,No major disruption identified based on current research.,13900.0,29.65704,4826,4826
+DEL_00080,PO_00080,01/12/23,S2,South Africa,Royal Gala,223,223,26/12/23,02/01/24,No major disruption identified based on current research.,11100.0,20.792520000000003,4906,4906
+DEL_00081,PO_00081,01/12/23,S3,Chile,Royal Gala,118,106,27/12/23,17/01/24,Higher than normal winter temperatures caused harvest delay in Chile [5],13900.0,12.37656,2596,2332
+DEL_00082,PO_00082,01/01/24,S2,South Africa,Fuji,344,344,26/01/24,26/01/24,No major disruption identified based on current research.,11100.0,32.07456,6880,6880
+DEL_00083,PO_00083,01/01/24,S2,South Africa,Golden Delicious,318,318,26/01/24,26/01/24,No major disruption identified based on current research.,11100.0,29.650320000000004,5724,5724
+DEL_00084,PO_00084,01/01/24,S2,South Africa,Granny Smith,272,272,26/01/24,26/01/24,No major disruption identified based on current research.,11100.0,25.36128,5712,5712
+DEL_00085,PO_00085,01/01/24,S2,South Africa,Pink Lady,262,262,26/01/24,26/01/24,No major disruption identified based on current research.,11100.0,24.428880000000003,4978,4978
+DEL_00086,PO_00086,01/01/24,S2,South Africa,Royal Gala,325,325,26/01/24,26/01/24,No major disruption identified based on current research.,11100.0,30.303,7150,7150
+DEL_00087,PO_00087,01/02/24,S2,South Africa,Fuji,318,318,26/02/24,26/02/24,No major disruption identified based on current research.,11100.0,29.650320000000004,6360,6360
+DEL_00088,PO_00088,01/02/24,S2,South Africa,Golden Delicious,291,291,26/02/24,26/02/24,No major disruption identified based on current research.,11100.0,27.13284,5238,5238
+DEL_00089,PO_00089,01/02/24,S2,South Africa,Granny Smith,243,243,26/02/24,26/02/24,No major disruption identified based on current research.,11100.0,22.65732,5103,5103
+DEL_00090,PO_00090,01/02/24,S2,South Africa,Pink Lady,276,276,26/02/24,26/02/24,No major disruption identified based on current research.,11100.0,25.734240000000007,5244,5244
+DEL_00091,PO_00091,01/02/24,S2,South Africa,Royal Gala,313,313,26/02/24,26/02/24,No major disruption identified based on current research.,11100.0,29.184120000000004,6886,6886
+DEL_00092,PO_00092,01/03/24,S2,South Africa,Fuji,272,272,26/03/24,26/03/24,No major disruption identified based on current research.,11100.0,25.36128,5440,5440
+DEL_00093,PO_00093,01/03/24,S2,South Africa,Golden Delicious,265,265,26/03/24,26/03/24,No major disruption identified based on current research.,11100.0,24.7086,4770,4770
+DEL_00094,PO_00094,01/03/24,S2,South Africa,Granny Smith,230,230,26/03/24,26/03/24,No major disruption identified based on current research.,11100.0,21.4452,4830,4830
+DEL_00095,PO_00095,01/03/24,S2,South Africa,Pink Lady,246,246,26/03/24,26/03/24,No major disruption identified based on current research.,11100.0,22.93704,4674,4674
+DEL_00096,PO_00096,01/03/24,S2,South Africa,Royal Gala,288,288,26/03/24,26/03/24,No major disruption identified based on current research.,11100.0,26.85312,6336,6336
+DEL_00097,PO_00097,01/04/24,S2,South Africa,Fuji,258,258,26/04/24,26/04/24,No major disruption identified based on current research.,11100.0,24.05592,5160,5160
+DEL_00098,PO_00098,01/04/24,S2,South Africa,Golden Delicious,238,238,26/04/24,26/04/24,No major disruption identified based on current research.,11100.0,22.19112,4284,4284
+DEL_00099,PO_00099,01/04/24,S2,South Africa,Granny Smith,216,216,26/04/24,26/04/24,No major disruption identified based on current research.,11100.0,20.13984,4536,4536
+DEL_00100,PO_00100,01/04/24,S2,South Africa,Pink Lady,223,223,26/04/24,26/04/24,No major disruption identified based on current research.,11100.0,20.792520000000003,4237,4237
+DEL_00101,PO_00101,01/04/24,S2,South Africa,Royal Gala,272,272,26/04/24,26/04/24,No major disruption identified based on current research.,11100.0,25.36128,5984,5984
+DEL_00102,PO_00102,01/05/24,S2,South Africa,Fuji,302,302,26/05/24,26/05/24,No major disruption identified based on current research.,11100.0,28.15848,6040,6040
+DEL_00103,PO_00103,01/05/24,S1,India,Golden Delicious,265,265,31/05/24,31/05/24,No major disruption identified based on current research.,21700.0,48.3042,4770,4770
+DEL_00104,PO_00104,01/05/24,S2,South Africa,Granny Smith,230,230,26/05/24,26/05/24,No major disruption identified based on current research.,11100.0,21.4452,4830,4830
+DEL_00105,PO_00105,01/05/24,S2,South Africa,Pink Lady,209,209,26/05/24,26/05/24,No major disruption identified based on current research.,11100.0,19.48716,3971,3971
+DEL_00106,PO_00106,01/05/24,S2,South Africa,Royal Gala,374,374,26/05/24,26/05/24,No major disruption identified based on current research.,11100.0,34.87176,8228,8228
+DEL_00107,PO_00107,01/06/24,S2,South Africa,Fuji,130,130,26/06/24,26/06/24,No major disruption identified based on current research.,11100.0,12.1212,2600,2600
+DEL_00108,PO_00108,01/06/24,S2,South Africa,Fuji,174,174,26/06/24,26/06/24,No major disruption identified based on current research.,11100.0,16.22376,3480,3480
+DEL_00109,PO_00109,01/06/24,S3,Chile,Fuji,51,51,27/06/24,27/06/24,No major disruption identified based on current research.,13900.0,5.95476,1020,1020
+DEL_00110,PO_00110,01/06/24,S1,India,Golden Delicious,348,348,01/07/24,01/07/24,No major disruption identified based on current research.,21700.0,63.43344,6264,6264
+DEL_00111,PO_00111,01/06/24,S2,South Africa,Granny Smith,258,258,26/06/24,26/06/24,No major disruption identified based on current research.,11100.0,24.05592,5418,5418
+DEL_00112,PO_00112,01/06/24,S2,South Africa,Pink Lady,237,237,26/06/24,26/06/24,No major disruption identified based on current research.,11100.0,22.09788,4503,4503
+DEL_00113,PO_00113,01/06/24,S2,South Africa,Royal Gala,480,480,26/06/24,26/06/24,No major disruption identified based on current research.,11100.0,44.7552,10560,10560
+DEL_00114,PO_00114,01/07/24,S3,Chile,Fuji,437,437,27/07/24,27/07/24,No major disruption identified based on current research.,13900.0,51.02412,8740,8740
+DEL_00115,PO_00115,01/07/24,S1,India,Golden Delicious,187,187,31/07/24,31/07/24,No major disruption identified based on current research.,21700.0,34.08636,3366,3366
+DEL_00116,PO_00116,01/07/24,S2,South Africa,Golden Delicious,215,215,26/07/24,26/07/24,No major disruption identified based on current research.,11100.0,20.0466,3870,3870
+DEL_00117,PO_00117,01/07/24,S2,South Africa,Granny Smith,160,160,26/07/24,26/07/24,No major disruption identified based on current research.,11100.0,14.918400000000002,3360,3360
+DEL_00118,PO_00118,01/07/24,S4,New Zealand,Granny Smith,153,145,28/08/24,28/08/24,Potential for smaller fruit sizes due to lingering effects of Cyclone Gabrielle [6],17600.0,21.4368,3213,3045
+DEL_00119,PO_00119,01/07/24,S2,South Africa,Pink Lady,58,58,26/07/24,26/07/24,No major disruption identified based on current research.,11100.0,5.407920000000001,1102,1102
+DEL_00120,PO_00120,01/07/24,S3,Chile,Pink Lady,225,225,27/07/24,27/07/24,No major disruption identified based on current research.,13900.0,26.271,4275,4275
+DEL_00121,PO_00121,01/07/24,S2,South Africa,Royal Gala,10,10,26/07/24,26/07/24,No major disruption identified based on current research.,11100.0,0.9324,220,220
+DEL_00122,PO_00122,01/07/24,S2,South Africa,Royal Gala,509,509,26/07/24,26/07/24,No major disruption identified based on current research.,11100.0,47.45916,11198,11198
+DEL_00123,PO_00123,01/08/24,S1,India,Fuji,200,200,31/08/24,31/08/24,No major disruption identified based on current research.,21700.0,36.456,4000,4000
+DEL_00124,PO_00124,01/08/24,S3,Chile,Fuji,284,284,27/08/24,27/08/24,No major disruption identified based on current research.,13900.0,33.15984,5680,5680
+DEL_00125,PO_00125,01/08/24,S2,South Africa,Golden Delicious,361,361,26/08/24,26/08/24,No major disruption identified based on current research.,11100.0,33.65964,6498,6498
+DEL_00126,PO_00126,01/08/24,S2,South Africa,Golden Delicious,55,55,26/08/24,26/08/24,No major disruption identified based on current research.,11100.0,5.1282,990,990
+DEL_00127,PO_00127,01/08/24,S4,New Zealand,Granny Smith,341,341,28/09/24,28/09/24,No major disruption identified based on current research.,17600.0,50.41344,7161,7161
+DEL_00128,PO_00128,01/08/24,S3,Chile,Pink Lady,292,292,27/08/24,27/08/24,No major disruption identified based on current research.,13900.0,34.09392,5548,5548
+DEL_00129,PO_00129,01/08/24,S1,India,Royal Gala,465,465,31/08/24,31/08/24,No major disruption identified based on current research.,21700.0,84.7602,10230,10230
+DEL_00130,PO_00130,01/09/24,S1,India,Fuji,200,200,01/10/24,01/10/24,No major disruption identified based on current research.,21700.0,36.456,4000,4000
+DEL_00131,PO_00131,01/09/24,S3,Chile,Fuji,255,255,27/09/24,27/09/24,No major disruption identified based on current research.,13900.0,29.7738,5100,5100
+DEL_00132,PO_00132,01/09/24,S2,South Africa,Golden Delicious,283,283,26/09/24,26/09/24,No major disruption identified based on current research.,11100.0,26.38692,5094,5094
+DEL_00133,PO_00133,01/09/24,S2,South Africa,Golden Delicious,147,147,26/09/24,26/09/24,No major disruption identified based on current research.,11100.0,13.70628,2646,2646
+DEL_00134,PO_00134,01/09/24,S1,India,Granny Smith,355,355,01/10/24,01/10/24,No major disruption identified based on current research.,21700.0,64.7094,7455,7455
+DEL_00135,PO_00135,01/09/24,S1,India,Pink Lady,279,279,01/10/24,01/10/24,No major disruption identified based on current research.,21700.0,50.85612,5301,5301
+DEL_00136,PO_00136,01/09/24,S1,India,Royal Gala,437,437,01/10/24,01/10/24,No major disruption identified based on current research.,21700.0,79.65636,9614,9614
+DEL_00137,PO_00137,01/10/24,S1,India,Fuji,200,200,31/10/24,31/10/24,No major disruption identified based on current research.,21700.0,36.456,4000,4000
+DEL_00138,PO_00138,01/10/24,S3,Chile,Fuji,230,230,27/10/24,27/10/24,No major disruption identified based on current research.,13900.0,26.854800000000004,4600,4600
+DEL_00139,PO_00139,01/10/24,S2,South Africa,Golden Delicious,164,164,26/10/24,26/10/24,No major disruption identified based on current research.,11100.0,15.29136,2952,2952
+DEL_00140,PO_00140,01/10/24,S3,Chile,Golden Delicious,238,238,27/10/24,27/10/24,No major disruption identified based on current research.,13900.0,27.78888,4284,4284
+DEL_00141,PO_00141,01/10/24,S1,India,Granny Smith,325,325,31/10/24,31/10/24,No major disruption identified based on current research.,21700.0,59.241,6825,6825
+DEL_00142,PO_00142,01/10/24,S1,India,Pink Lady,246,246,31/10/24,31/10/24,No major disruption identified based on current research.,21700.0,44.84088,4674,4674
+DEL_00143,PO_00143,01/10/24,S1,India,Royal Gala,163,163,31/10/24,31/10/24,No major disruption identified based on current research.,21700.0,29.71164,3586,3586
+DEL_00144,PO_00144,01/10/24,S1,India,Royal Gala,135,135,31/10/24,31/10/24,No major disruption identified based on current research.,21700.0,24.6078,2970,2970
+DEL_00145,PO_00145,01/10/24,S2,South Africa,Royal Gala,81,81,26/10/24,26/10/24,No major disruption identified based on current research.,11100.0,7.552440000000001,1782,1782
+DEL_00146,PO_00146,01/11/24,S3,Chile,Fuji,63,63,27/11/24,27/11/24,No major disruption identified based on current research.,13900.0,7.355880000000001,1260,1260
+DEL_00147,PO_00147,01/11/24,S4,New Zealand,Fuji,339,339,29/12/24,29/12/24,No major disruption identified based on current research.,17600.0,50.11776000000001,6780,6780
+DEL_00148,PO_00148,01/11/24,S3,Chile,Golden Delicious,374,374,27/11/24,27/11/24,No major disruption identified based on current research.,13900.0,43.66824,6732,6732
+DEL_00149,PO_00149,01/11/24,S1,India,Granny Smith,125,125,01/12/24,01/12/24,No major disruption identified based on current research.,21700.0,22.785,2625,2625
+DEL_00150,PO_00150,01/11/24,S1,India,Granny Smith,95,95,01/12/24,01/12/24,No major disruption identified based on current research.,21700.0,17.3166,1995,1995
+DEL_00151,PO_00151,01/11/24,S4,New Zealand,Granny Smith,93,93,29/12/24,29/12/24,No major disruption identified based on current research.,17600.0,13.74912,1953,1953
+DEL_00152,PO_00152,01/11/24,S1,India,Pink Lady,104,104,01/12/24,01/12/24,No major disruption identified based on current research.,21700.0,18.95712,1976,1976
+DEL_00153,PO_00153,01/11/24,S1,India,Pink Lady,71,71,01/12/24,01/12/24,No major disruption identified based on current research.,21700.0,12.94188,1349,1349
+DEL_00154,PO_00154,01/11/24,S3,Chile,Pink Lady,62,62,27/11/24,27/11/24,No major disruption identified based on current research.,13900.0,7.23912,1178,1178
+DEL_00155,PO_00155,01/11/24,S2,South Africa,Royal Gala,2,2,26/11/24,26/11/24,No major disruption identified based on current research.,11100.0,0.1864799999999999,44,44
+DEL_00156,PO_00156,01/11/24,S2,South Africa,Royal Gala,353,353,26/11/24,26/11/24,No major disruption identified based on current research.,11100.0,32.91372,7766,7766
+DEL_00157,PO_00157,01/12/24,S4,New Zealand,Fuji,374,374,28/01/25,28/01/25,No major disruption identified based on current research.,17600.0,55.29216,7480,7480
+DEL_00158,PO_00158,01/12/24,S3,Chile,Golden Delicious,348,348,27/12/24,27/12/24,No major disruption identified based on current research.,13900.0,40.63248,6264,6264
+DEL_00159,PO_00159,01/12/24,S4,New Zealand,Granny Smith,298,298,28/01/25,28/01/25,No major disruption identified based on current research.,17600.0,44.05632000000001,6258,6258
+DEL_00160,PO_00160,01/12/24,S3,Chile,Pink Lady,254,254,27/12/24,27/12/24,No major disruption identified based on current research.,13900.0,29.65704,4826,4826
+DEL_00161,PO_00161,01/12/24,S2,South Africa,Royal Gala,223,223,26/12/24,26/12/24,No major disruption identified based on current research.,11100.0,20.792520000000003,4906,4906
+DEL_00162,PO_00162,01/12/24,S3,Chile,Royal Gala,118,118,27/12/24,27/12/24,No major disruption identified based on current research.,13900.0,13.777679999999998,2596,2596

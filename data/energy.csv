@@ -1,5 +1,7 @@
 Origin Port,Destination Port,Approximate Distance (km),Average Energy Consumption (kWh),Average Cost (EUR),Average Shipping Time (Days)
-Jawaharlal Nehru Port Sheva Navi Mumbai,Albert Plesmanweg 240 Rotterdam,21700,325.5,534,30
-Port of Cape Town,Albert Plesmanweg 240 Rotterdam,11100,166.5,250,25
-Port of San Antonio,Albert Plesmanweg 240 Rotterdam,13900,208.5,702,26
-Ports of Auckland,Albert Plesmanweg 240 Rotterdam,17600,264.0,860,58
+Jawaharlal Nehru Port Sheva Navi Mumbai 400707 Maharashtra India,Albert Plesmanweg 240 Rotterdam,21700,325.5,534,30
+Mundra Port Adani Port Road Mundra 370421 Gujarat India,Albert Plesmanweg 240 Rotterdam,21700,325.5,534,30
+Port of Cape Town P O Box 4245 Roggebaai 8000 South Africa,Albert Plesmanweg 240 Rotterdam,11100,166.5,250,25
+Port of San Antonio Barros Luco San Antonio Valparaiso Chile,Albert Plesmanweg 240 Rotterdam,13900,208.5,702,26
+Ports of Auckland Sunderland Street Auckland New Zealand,Albert Plesmanweg 240 Rotterdam,17600,264,860,58
+Port of Napier Breakwater Road Napier 4110 New Zealand,Albert Plesmanweg 240 Rotterdam,19600,300,1000,58
