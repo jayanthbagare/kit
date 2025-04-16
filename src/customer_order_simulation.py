@@ -76,7 +76,7 @@ def convert_to_dataframe(delivery_documents):
 
 # Convert to DataFrame and save as CSV
 delivery_df = convert_to_dataframe(delivery_documents)
-output_path = '../data/delivery_documents.csv'
+output_path = '../data/customer_delivery_documents.csv'
 delivery_df.to_csv(output_path, index=False)
 
 print(f"Generated {len(delivery_documents)} delivery documents")
