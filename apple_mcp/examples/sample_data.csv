@@ -1,0 +1,11 @@
+city,customer_id,apple_variety,year,month,tonnage
+Riyadh,Lulu,fuji,2024,jan,100.5
+Riyadh,Carrefour,gala,2024,feb,85.2
+Jeddah,Lulu,fuji,2024,jan,120.8
+Jeddah,Carrefour,gala,2024,feb,95.3
+Dammam,Lulu,fuji,2024,jan,110.6
+Riyadh,Lulu,gala,2024,mar,92.1
+Jeddah,Carrefour,fuji,2024,mar,115.4
+Dammam,Carrefour,gala,2024,apr,88.7
+Riyadh,Lulu,fuji,2024,apr,105.2
+Jeddah,Lulu,gala,2024,may,118.9

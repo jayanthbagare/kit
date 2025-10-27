@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "tonnage-predictor": {
+      "command": "python3",
+      "args": [
+        "/home/claude/tonnage_mcp_server.py"
+      ],
+      "env": {},
+      "description": "Tonnage prediction model server"
+    }
+  }
+}

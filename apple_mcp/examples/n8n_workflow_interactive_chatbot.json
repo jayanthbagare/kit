@@ -1,0 +1,237 @@
+{
+  "name": "Apple Tonnage Interactive Chatbot",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ]
+      },
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        240,
+        300
+      ],
+      "webhookId": "telegram-bot-trigger",
+      "credentials": {
+        "telegramApi": {
+          "id": "YOUR_TELEGRAM_CREDENTIAL_ID",
+          "name": "Telegram Purchasing Manager Bot"
+        }
+      },
+      "notesInFlow": true,
+      "notes": "Receives all messages sent to the bot"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get the incoming message\nconst message = $input.item.json.message;\nconst chatId = message.chat.id;\nconst text = message.text.trim().toLowerCase();\nconst userId = message.from.id;\n\n// Initialize or get existing conversation state from static data\nlet conversationKey = `conv_${userId}`;\nlet state = $getWorkflowStaticData('node')[conversationKey] || {\n  step: 'start',\n  data: {}\n};\n\n// Handle commands\nif (text === '/start' || text === '/predict') {\n  state = {\n    step: 'ask_city',\n    data: {}\n  };\n  $getWorkflowStaticData('node')[conversationKey] = state;\n  return {\n    chatId,\n    response: \"🍎 *Apple Tonnage Prediction*\\n\\nLet's get started! I'll need some information.\\n\\n📍 Which city are you interested in?\\n\\nType one of: Riyadh, Jeddah, Dammam\",\n    step: 'ask_city'\n  };\n}\n\nif (text === '/help') {\n  return {\n    chatId,\n    response: \"🤖 *Available Commands:*\\n\\n/start - Start new prediction\\n/predict - Start new prediction\\n/valid - Show valid values\\n/cancel - Cancel current prediction\\n/help - Show this help\",\n    step: 'help'\n  };\n}\n\nif (text === '/cancel') {\n  delete $getWorkflowStaticData('node')[conversationKey];\n  return {\n    chatId,\n    response: \"❌ Prediction cancelled. Use /start to begin a new one.\",\n    step: 'cancelled'\n  };\n}\n\nif (text === '/valid') {\n  return {\n    chatId,\n    response: \"📋 *Valid Values:*\\n\\n*Cities:* Riyadh, Jeddah, Dammam\\n*Customers:* Lulu, Carrefour, Panda\\n*Varieties:* fuji, gala, granny_smith\\n*Months:* jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec\\n*Years:* 2024, 2025\\n\\nUse /start to begin a prediction.\",\n    step: 'valid_values',\n    skipPrediction: true\n  };\n}\n\n// Process based on current step\nif (state.step === 'ask_city') {\n  const validCities = ['riyadh', 'jeddah', 'dammam'];\n  if (validCities.includes(text)) {\n    state.data.city = text.charAt(0).toUpperCase() + text.slice(1);\n    state.step = 'ask_customer';\n    $getWorkflowStaticData('node')[conversationKey] = state;\n    return {\n      chatId,\n      response: `Great! City: *${state.data.city}*\\n\\n👥 Which customer?\\n\\nType one of: Lulu, Carrefour, Panda`,\n      step: 'ask_customer'\n    };\n  } else {\n    return {\n      chatId,\n      response: `❌ Invalid city. Please choose: Riyadh, Jeddah, or Dammam`,\n      step: 'ask_city'\n    };\n  }\n}\n\nif (state.step === 'ask_customer') {\n  const validCustomers = ['lulu', 'carrefour', 'panda'];\n  if (validCustomers.includes(text)) {\n    state.data.customer_id = text.charAt(0).toUpperCase() + text.slice(1);\n    state.step = 'ask_variety';\n    $getWorkflowStaticData('node')[conversationKey] = state;\n    return {\n      chatId,\n      response: `Perfect! Customer: *${state.data.customer_id}*\\n\\n🍎 Which apple variety?\\n\\nType one of: fuji, gala, granny_smith`,\n      step: 'ask_variety'\n    };\n  } else {\n    return {\n      chatId,\n      response: `❌ Invalid customer. Please choose: Lulu, Carrefour, or Panda`,\n      step: 'ask_customer'\n    };\n  }\n}\n\nif (state.step === 'ask_variety') {\n  const validVarieties = ['fuji', 'gala', 'granny_smith'];\n  if (validVarieties.includes(text)) {\n    state.data.apple_variety = text;\n    state.step = 'ask_year';\n    $getWorkflowStaticData('node')[conversationKey] = state;\n    return {\n      chatId,\n      response: `Excellent! Variety: *${state.data.apple_variety}*\\n\\n📅 Which year?\\n\\nType: 2024 or 2025`,\n      step: 'ask_year'\n    };\n  } else {\n    return {\n      chatId,\n      response: `❌ Invalid variety. Please choose: fuji, gala, or granny_smith`,\n      step: 'ask_variety'\n    };\n  }\n}\n\nif (state.step === 'ask_year') {\n  const year = parseInt(text);\n  if (year === 2024 || year === 2025) {\n    state.data.year = year;\n    state.step = 'ask_month';\n    $getWorkflowStaticData('node')[conversationKey] = state;\n    return {\n      chatId,\n      response: `Got it! Year: *${state.data.year}*\\n\\n📆 Which month?\\n\\nType one of: jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec`,\n      step: 'ask_month'\n    };\n  } else {\n    return {\n      chatId,\n      response: `❌ Invalid year. Please type: 2024 or 2025`,\n      step: 'ask_year'\n    };\n  }\n}\n\nif (state.step === 'ask_month') {\n  const validMonths = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];\n  if (validMonths.includes(text)) {\n    state.data.month = text;\n    state.step = 'complete';\n    // Clear the conversation state\n    delete $getWorkflowStaticData('node')[conversationKey];\n    return {\n      chatId,\n      response: `Processing your prediction...\\n\\n⏳ Please wait...`,\n      step: 'complete',\n      predictionData: state.data\n    };\n  } else {\n    return {\n      chatId,\n      response: `❌ Invalid month. Please type a valid month (jan, feb, mar, etc.)`,\n      step: 'ask_month'\n    };\n  }\n}\n\n// Default response\nreturn {\n  chatId,\n  response: \"❓ I didn't understand that. Use /help to see available commands or /start to begin a prediction.\",\n  step: 'unknown'\n};"
+      },
+      "name": "Process Conversation",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        460,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "Handles conversation flow and state management"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.step }}",
+              "operation": "equals",
+              "value2": "complete"
+            }
+          ]
+        }
+      },
+      "name": "Check If Ready to Predict",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        680,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.chatId }}",
+        "text": "={{ $json.response }}",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "name": "Send Response",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.1,
+      "position": [
+        900,
+        450
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "YOUR_TELEGRAM_CREDENTIAL_ID",
+          "name": "Telegram Purchasing Manager Bot"
+        }
+      },
+      "notesInFlow": true,
+      "notes": "Sends conversational responses"
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:8000/predict",
+        "method": "POST",
+        "sendBody": true,
+        "contentType": "json",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "city",
+              "value": "={{ $json.predictionData.city }}"
+            },
+            {
+              "name": "customer_id",
+              "value": "={{ $json.predictionData.customer_id }}"
+            },
+            {
+              "name": "apple_variety",
+              "value": "={{ $json.predictionData.apple_variety }}"
+            },
+            {
+              "name": "year",
+              "value": "={{ $json.predictionData.year }}"
+            },
+            {
+              "name": "month",
+              "value": "={{ $json.predictionData.month }}"
+            }
+          ]
+        }
+      },
+      "name": "Get Prediction",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        900,
+        200
+      ],
+      "notesInFlow": true,
+      "notes": "Calls MCP server to get prediction"
+    },
+    {
+      "parameters": {
+        "jsCode": "const chatId = $input.first().json.chatId;\nconst predictionData = $input.last().json;\n\nif (predictionData.status === 'error') {\n  return {\n    chatId,\n    message: `❌ *Prediction Error*\\n\\n${predictionData.message}\\n\\nPlease make sure the model is trained. Use /start to try again.`\n  };\n}\n\nconst prediction = parseFloat(predictionData.prediction).toFixed(2);\nconst inputs = predictionData.inputs;\n\n// Determine demand level\nlet demandEmoji = '🟢';\nlet demandLevel = 'Low';\nif (prediction > 70) {\n  demandEmoji = '🔴';\n  demandLevel = 'High';\n} else if (prediction > 50) {\n  demandEmoji = '🟡';\n  demandLevel = 'Medium';\n}\n\nconst message = `${demandEmoji} *Tonnage Prediction Result*\\n\\n` +\n  `📋 *Input Parameters:*\\n` +\n  `• City: ${inputs.city}\\n` +\n  `• Customer: ${inputs.customer_id}\\n` +\n  `• Variety: ${inputs.apple_variety}\\n` +\n  `• Year: ${inputs.year}\\n` +\n  `• Month: ${inputs.month}\\n\\n` +\n  `📊 *Prediction:*\\n` +\n  `*${prediction} tons*\\n\\n` +\n  `📈 Demand Level: *${demandLevel}*\\n\\n` +\n  `💡 Use /start for another prediction`;\n\nreturn { chatId, message };"
+      },
+      "name": "Format Prediction Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1120,
+        200
+      ],
+      "notesInFlow": true,
+      "notes": "Formats the final prediction message"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.chatId }}",
+        "text": "={{ $json.message }}",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "name": "Send Prediction",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.1,
+      "position": [
+        1340,
+        200
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "YOUR_TELEGRAM_CREDENTIAL_ID",
+          "name": "Telegram Purchasing Manager Bot"
+        }
+      },
+      "notesInFlow": true,
+      "notes": "Sends the final prediction to user"
+    }
+  ],
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Process Conversation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Conversation": {
+      "main": [
+        [
+          {
+            "node": "Check If Ready to Predict",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check If Ready to Predict": {
+      "main": [
+        [
+          {
+            "node": "Get Prediction",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Prediction": {
+      "main": [
+        [
+          {
+            "node": "Format Prediction Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Prediction Response": {
+      "main": [
+        [
+          {
+            "node": "Send Prediction",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "versionId": "1.0.0",
+  "meta": {
+    "instanceId": "your-n8n-instance-id"
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "name": "Apple Tonnage Auto-Training & Telegram Alert",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "/Users/I028960/Projects/apple_mcp/examples/sample_data.csv",
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "triggerOn": "modified"
+      },
+      "name": "Watch CSV File",
+      "type": "n8n-nodes-base.localFileTrigger",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ],
+      "id": "watch-csv-trigger",
+      "webhookId": "watch-csv-file",
+      "notesInFlow": true,
+      "notes": "Monitors the CSV file for changes. Triggers when file is modified."
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:8000/train",
+        "method": "POST",
+        "sendBody": true,
+        "contentType": "json",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "csv_path",
+              "value": "={{ $json.path }}"
+            },
+            {
+              "name": "model_type",
+              "value": "random_forest"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "name": "Train Model",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        470,
+        300
+      ],
+      "id": "train-model-http",
+      "notesInFlow": true,
+      "notes": "Calls the MCP server to train the model with updated CSV data"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.status === 'success' }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "name": "Check Training Success",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        690,
+        300
+      ],
+      "id": "check-training-success"
+    },
+    {
+      "parameters": {
+        "filePath": "={{ $('Train Model').item.json.csv_path || $('Watch CSV File').item.json.path }}"
+      },
+      "name": "Read CSV File",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        910,
+        200
+      ],
+      "id": "read-csv-file",
+      "notesInFlow": true,
+      "notes": "Read the CSV file that was used for training"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get CSV content from binary data\nconst binaryData = $input.first().binary.data;\nconst csvContent = Buffer.from(binaryData.data, 'base64').toString('utf-8');\n\n// Parse CSV manually\nconst lines = csvContent.trim().split('\\n');\nconst headers = lines[0].split(',');\n\n// Extract unique combinations\nconst uniqueCombos = new Set();\n\nfor (let i = 1; i < lines.length; i++) {\n  const values = lines[i].split(',');\n  if (values.length >= 3) {\n    const city = values[0].trim();\n    const customer = values[1].trim();\n    const variety = values[2].trim();\n    \n    const combo = `${city}|${customer}|${variety}`;\n    uniqueCombos.add(combo);\n  }\n}\n\n// Convert to array of objects\nconst combinations = [];\nfor (const combo of uniqueCombos) {\n  const [city, customer_id, apple_variety] = combo.split('|');\n  combinations.push({\n    city: city,\n    customer_id: customer_id,\n    apple_variety: apple_variety\n  });\n}\n\nreturn combinations.map(combo => ({ json: combo }));"
+      },
+      "name": "Extract Unique Combinations",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1130,
+        200
+      ],
+      "id": "extract-unique-combinations",
+      "notesInFlow": true,
+      "notes": "Parse CSV and extract all unique combinations"
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:8000/predict",
+        "method": "POST",
+        "sendBody": true,
+        "contentType": "json",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "city",
+              "value": "={{ $json.city }}"
+            },
+            {
+              "name": "customer_id",
+              "value": "={{ $json.customer_id }}"
+            },
+            {
+              "name": "apple_variety",
+              "value": "={{ $json.apple_variety }}"
+            },
+            {
+              "name": "year",
+              "value": "={{ new Date().getFullYear() }}"
+            },
+            {
+              "name": "month",
+              "value": "={{ ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'][(new Date().getMonth() + 1) % 12] }}"
+            }
+          ]
+        },
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 1
+            }
+          }
+        }
+      },
+      "name": "Get Next Month Prediction",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1130,
+        200
+      ],
+      "id": "get-next-month-prediction",
+      "notesInFlow": true,
+      "notes": "Get next month's prediction for each combination"
+    },
+    {
+      "parameters": {
+        "jsCode": "// For each prediction result, find and merge with its original combination\nconst items = [];\n\nfor (let i = 0; i < $input.all().length; i++) {\n  const predictionResult = $input.all()[i].json;\n  const combination = $('Extract Unique Combinations').all()[i].json;\n  \n  items.push({\n    json: {\n      city: combination.city,\n      customer_id: combination.customer_id,\n      apple_variety: combination.apple_variety,\n      prediction: predictionResult.prediction\n    }\n  });\n}\n\nreturn items;"
+      },
+      "name": "Merge Combination with Prediction",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1350,
+        200
+      ],
+      "id": "merge-combination-prediction",
+      "notesInFlow": true,
+      "notes": "Combine the original combination data with the prediction result"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get all prediction results\nconst predictions = $input.all();\n\n// Calculate next month info\nconst monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];\nconst nextMonth = monthNames[(new Date().getMonth() + 1) % 12];\nconst nextMonthYear = (new Date().getMonth() === 11) ? new Date().getFullYear() + 1 : new Date().getFullYear();\n\n// Build the header\nlet message = `🍎 *Apple Tonnage Predictions*\\n\\n`;\nmessage += `📅 *${nextMonth} ${nextMonthYear}*\\n\\n`;\n\n// Group predictions by city\nconst predictionsByCity = {};\nfor (const item of predictions) {\n  const data = item.json;\n  \n  // Get city from inputs field if available, otherwise from the original combination\n  const city = data.inputs?.city || data.city;\n  const customer = data.inputs?.customer_id || data.customer_id;\n  const variety = data.inputs?.apple_variety || data.apple_variety;\n  const tonnage = parseFloat(data.prediction).toFixed(2);\n  \n  if (!predictionsByCity[city]) {\n    predictionsByCity[city] = [];\n  }\n  \n  predictionsByCity[city].push({\n    customer: customer,\n    variety: variety,\n    tonnage: tonnage\n  });\n}\n\n// Format predictions by city\nfor (const city in predictionsByCity) {\n  message += `📍 *${city}*\\n`;\n  \n  for (const pred of predictionsByCity[city]) {\n    message += `  • ${pred.customer} - ${pred.variety.charAt(0).toUpperCase() + pred.variety.slice(1)}: *${pred.tonnage} tons*\\n`;\n  }\n  \n  message += `\\n`;\n}\n\nreturn {\n  message: message\n};"
+      },
+      "name": "Format Telegram Message",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1350,
+        200
+      ],
+      "id": "format-telegram-message",
+      "notesInFlow": true,
+      "notes": "Formats a nice message for Telegram with all relevant information"
+    },
+    {
+      "parameters": {
+        "chatId": "YOUR_CHAT_ID_HERE",
+        "text": "={{ $json.message }}",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "name": "Send Telegram Message",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.1,
+      "position": [
+        1570,
+        200
+      ],
+      "id": "send-telegram-message",
+      "credentials": {
+        "telegramApi": {
+          "id": "YOUR_TELEGRAM_CREDENTIAL_ID",
+          "name": "Telegram Purchasing Manager Bot"
+        }
+      },
+      "notesInFlow": true,
+      "notes": "Sends the alert to the purchasing manager on Telegram"
+    },
+    {
+      "parameters": {
+        "chatId": "YOUR_CHAT_ID_HERE",
+        "text": "⚠️ *Model Training Failed*\\n\\nThe apple tonnage prediction model failed to train with the latest CSV update.\\n\\nPlease check the CSV file format and server logs.\\n\\n📅 {{ new Date().toLocaleString() }}",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "name": "Send Failure Alert",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.1,
+      "position": [
+        910,
+        400
+      ],
+      "id": "send-failure-telegram",
+      "credentials": {
+        "telegramApi": {
+          "id": "YOUR_TELEGRAM_CREDENTIAL_ID",
+          "name": "Telegram Purchasing Manager Bot"
+        }
+      },
+      "notesInFlow": true,
+      "notes": "Alerts if training fails"
+    }
+  ],
+  "connections": {
+    "Watch CSV File": {
+      "main": [
+        [
+          {
+            "node": "Train Model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Train Model": {
+      "main": [
+        [
+          {
+            "node": "Check Training Success",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Training Success": {
+      "main": [
+        [
+          {
+            "node": "Read CSV File",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send Failure Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read CSV File": {
+      "main": [
+        [
+          {
+            "node": "Extract Unique Combinations",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Unique Combinations": {
+      "main": [
+        [
+          {
+            "node": "Get Next Month Prediction",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Next Month Prediction": {
+      "main": [
+        [
+          {
+            "node": "Merge Combination with Prediction",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge Combination with Prediction": {
+      "main": [
+        [
+          {
+            "node": "Format Telegram Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Telegram Message": {
+      "main": [
+        [
+          {
+            "node": "Send Telegram Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "versionId": "1.0.0",
+  "meta": {
+    "instanceId": "your-n8n-instance-id"
+  }
+}
